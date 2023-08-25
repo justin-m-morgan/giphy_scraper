@@ -1,0 +1,15 @@
+# Scratchpad
+
+## Section
+
+```elixir
+Finch.build(:get, "https://hex.pm") |> Finch.request(MyFinch)
+```
+
+```elixir
+IEx.Helpers.recompile()
+```
+
+```elixir
+GiphyScraper.search("shaker")
+```

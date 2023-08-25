@@ -22,7 +22,7 @@ Create an elixir project using `mix new` named "GiphyScraper" and write a simple
 ]
 ```
 
-I recommend using the Finch module to make the requests and you can find the Giphy endpoint here. 
+I recommend using the Finch module to make the requests and you can find [the Giphy endpoint here](https://developers.giphy.com/docs/api/endpoint/#search). 
 
 In order to use Finch, you'll want to generate your project using the `--sup` flag
 

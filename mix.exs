@@ -14,6 +14,7 @@ defmodule GiphyScraper.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      env: [giphy_api_key: System.get_env("GIPHY_API_KEY")],
       extra_applications: [:logger],
       mod: {GiphyScraper.Application, []}
     ]
@@ -24,6 +25,8 @@ defmodule GiphyScraper.MixProject do
     [
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:finch, "~> 0.16"},
+      {:jason, "~> 1.4"}
     ]
   end
 end

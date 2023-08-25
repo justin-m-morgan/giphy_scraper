@@ -10,6 +10,7 @@ defmodule GiphyScraper.Application do
     children = [
       # Starts a worker by calling: GiphyScraper.Worker.start_link(arg)
       # {GiphyScraper.Worker, arg}
+      {Finch, name: MyFinch}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -1,18 +1,19 @@
 defmodule GiphyScraper do
   @moduledoc """
-  Documentation for `GiphyScraper`.
+  Application for fetching GIF data from Giphy
   """
+
+  alias GiphyScraper.GiphyHttpClient
 
   @doc """
-  Hello world.
+  Search for GIFs on Giphy
 
-  ## Examples
+  Query options:
 
-      iex> GiphyScraper.hello()
-      :world
-
+  - limit: integer (default: 25)
+  - offset: integer (default: 0)
   """
-  def hello do
-    :world
-  end
+  @type search_opts :: [limit: non_neg_integer(), offset: non_neg_integer()]
+  @spec search(String.t(), search_opts()) :: {:ok, list(GiphyImage.t())} | {:error, String.t()}
+  defdelegate search(query, opts \\ []), to: GiphyHttpClient, as: :get
 end
